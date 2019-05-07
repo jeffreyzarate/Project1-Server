@@ -22,6 +22,7 @@ public class ResolveRequestServlet extends DefaultServlet{
 	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		response.addHeader("Access-Control-Allow-Headers", "content-type");
 		response.addHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
+		response.addHeader("Access-Control-Allow-Methods", "POST, PUT");
 		super.service(request, response);
 	}
 	@Override
